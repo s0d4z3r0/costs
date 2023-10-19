@@ -1,9 +1,11 @@
+// import styles from "./Container.module.css";
 
+const Container = ({ children, customClass }) => {
+  return <div className={`container ${customClass}`}>
 
-const Container = () => {
-  return (
-    <div>Container</div>
-  )
-}
+    {children}
 
-export default Container
+    </div>;
+};
+
+export default Container;
