@@ -1,12 +1,17 @@
-
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
-
   return (
-    <div className="App">
-      <h1 className="title">Costs</h1>
-    </div>
-  )
+      <div className="App">
+        <ul>
+          <Link to="/costs/">Home</Link>
+          <Link to="/costs/company">Company</Link>
+          <Link to="/costs/contact">Contact</Link>
+          <Link to="/costs/newproject">New Project</Link>
+          <Outlet/>
+        </ul>
+      </div>
+  );
 }
 
-export default App
+export default App;
