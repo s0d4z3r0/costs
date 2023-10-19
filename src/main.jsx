@@ -13,10 +13,10 @@ import ErrorPage from './components/pages/ErrorPage.jsx'
 
 // Configurações de Rotas DOM
 import {
-  createBrowserRouter, RouterProvider
+  createHashRouter, RouterProvider
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/costs',
     element: <App/>,
