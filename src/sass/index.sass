@@ -9,6 +9,15 @@ html, body, #root
     background-color: $color-white
     height: 100%
 
+    &::-webkit-scrollbar
+        width: 6px
+    &::-webkit-scrollbar-track
+        background: $color-black
+    &::-webkit-scrollbar-thumb
+        background: $color-primary
+        border: 2px solid $color-black
+        border-radius: 20px
+
 // CONTAINER
 .container
     z-index: 0
@@ -40,7 +49,7 @@ html, body, #root
 
 // LINKBUTTON
 .btn
-    padding: 0.2rem .5rem
+    padding: 0.5rem 1.5rem
     text-decoration: none
     font-family: $font-title
     font-size: 1rem
@@ -48,8 +57,10 @@ html, body, #root
     color: $color-primary
     background-color: rgba($color-black, .8)
     margin: .5rem 0 0
+    border: none
     border-radius: 5px
     transition: 200ms ease-in-out
+    cursor: pointer
     &:hover
         background: rgba($color-black, 1)
     @media (min-width: 425px)
@@ -185,7 +196,7 @@ html, body, #root
         font-family: $font-title
         font-size: .8rem
     img
-        width: 200px
+        width: 120%
         margin: 2rem 0 0
     @media (min-width: 425px)
         h1
