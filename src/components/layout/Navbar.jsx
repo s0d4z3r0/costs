@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Container customClass={"navCustom"}>
 
-        <Link to="/costs/">
+        <Link to="/">
           <img src={logo} alt="logo" className="logonav" />
         </Link>
 
@@ -22,16 +22,16 @@ const Navbar = () => {
 
         <ul className={`list ${showMenu ? 'show' : 'hide'}`}>
           <li>
-            <Link to="/costs/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/costs/company">Company</Link>
+            <Link to="/company">Company</Link>
           </li>
           <li>
-            <Link to="/costs/contact">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/costs/newproject">New Project</Link>
+            <Link to="/newproject">New Project</Link>
           </li>
         </ul>
       </Container>

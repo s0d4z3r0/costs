@@ -8,7 +8,7 @@ const Home = () => {
         Bem-vindo ao <span>Costs</span>
       </h1>
       <p>Gerencie seus projetos agora mesmo!</p>
-      <LinkButton to={"/costs/newproject"} text={"Criar Projeto"} />
+      <LinkButton to={"/newproject"} text={"Criar Projeto"} />
       <img src={investment} alt="Costs" />
     </section>
   );

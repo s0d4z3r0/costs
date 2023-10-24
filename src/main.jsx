@@ -18,24 +18,24 @@ import {
 
 const router = createHashRouter([
   {
-    path: '/costs',
+    path: '/',
     element: <App/>,
     errorElement: <ErrorPage/>,
     children: [
       {
-        path: '/costs',
+        path: '/',
         element: <Home/>
       },
       {
-        path: '/costs/company',
+        path: '/company',
         element: <Company/>
       },
       {
-        path: '/costs/contact',
+        path: '/contact',
         element: <Contact/>
       },
       {
-        path: '/costs/newproject',
+        path: '/newproject',
         element: <NewProject/>
       },
     ]

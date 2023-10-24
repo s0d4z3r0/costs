@@ -5,7 +5,7 @@ const ErrorPage = () => {
     <div>
         <h1>ERRO 404!</h1>
 
-        <Link to="/costs">Retornar para Home</Link>
+        <Link to="/">Retornar para Home</Link>
     </div>
   )
 }
