@@ -15,6 +15,7 @@ import ErrorPage from './components/pages/ErrorPage.jsx'
 import {
   createHashRouter, RouterProvider
 } from "react-router-dom";
+import Projects from "./components/pages/Projects.jsx";
 
 const router = createHashRouter([
   {
@@ -25,6 +26,10 @@ const router = createHashRouter([
       {
         path: '/',
         element: <Home/>
+      },
+      {
+        path: '/projects',
+        element: <Projects/>
       },
       {
         path: '/company',
