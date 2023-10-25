@@ -10,6 +10,11 @@ const Navbar = () => {
     const handleMenu = () => {
         setShowMenu(!showMenu)
     }
+
+    const handleCloseMenu = () => {
+        setShowMenu(false)
+    }
+
   return (
     <nav className="navbar">
       <Container customClass={"navCustom"}>
@@ -21,16 +26,16 @@ const Navbar = () => {
         <i className="bi bi-list" onClick={handleMenu}></i>
 
         <ul className={`list ${showMenu ? 'show' : 'hide'}`}>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link to="/company">Company</Link>
           </li>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link to="/newproject">New Project</Link>
           </li>
         </ul>
