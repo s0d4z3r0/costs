@@ -4,14 +4,14 @@ const Message = ({ type, msg }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
-    if(msg) {
-      setShowMessage(true);
+    if(msg){
+    setShowMessage(true);
 
-      const timer = setTimeout(() => {
-        setShowMessage(false);
-      }, 3000);
+    const timer = setTimeout(() => {
+      setShowMessage(false);
+    }, 3000);
 
-      return () => clearTimeout(timer);
+    return () => clearTimeout(timer);
     }
   }, [msg]);
 

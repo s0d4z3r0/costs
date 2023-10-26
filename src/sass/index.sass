@@ -62,11 +62,45 @@ html, body, #root
     cursor: pointer
     &:hover
         background: rgba($color-black, 1)     
+.edit
+    background-color: rgba($color-primary, .8)
+    color: $color-black
+    &:hover
+        background: rgba($color-primary, 1)     
+.delete
+    background-color: rgba(128, 21, 21, .8)
+    &:hover
+        background: rgba(128, 21, 21, 1)     
 
+// LOADER
+.custom-loader
+    width: 50px
+    height: 50px
+    display: grid
+    border: 4px solid $color-white
+    border-radius: 50%
+    border-color: #90641D $color-white
+    animation: s6 1s infinite linear
+    &::before, &::after
+        content: ""
+        grid-area: 1/1
+        margin: 2px
+        border: inherit
+        border-radius: 50%
+    &::before
+        border-color: #FFBB33 $color-white
+        animation: inherit
+        animation-duration: .5s
+        animation-direction: reverse
+    &::after
+        margin: 8px
+    @keyframes s6
+        100%
+            transform: rotate(1turn)
+            
 // MESSAGE
 .message
     border: 2px solid #000
-    width: 100%
     padding: .5rem 1rem
     margin: 0 auto
     text-align: center
@@ -76,6 +110,11 @@ html, body, #root
     font-family: $font-title
     font-weight: bold
     animation: showMessage 500ms ease-in-out 
+    @keyframes showMessage
+        0%
+            opacity: 0
+        100%
+            opacity: 1
 .success
     border-color:#4fce69
     background-color: #adeeba
@@ -85,11 +124,22 @@ html, body, #root
     background-color: #eeadad
     color: #801515
 
-@keyframes showMessage
-    0%
-        opacity: 0
-    100%
-        opacity: 1
+// CARD
+.dot
+    display: block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background-color: #ccc
+.dot_Infra
+    background-color: $color-Infra 
+.dot_Desenvolvimento
+    background-color: $color-Desenvolvimento 
+.dot_Design
+    background-color: $color-Design 
+.dot_Planejamento
+    background-color: $color-Planejamento 
+
 // NAVBAR
 .navbar
     display: flex
@@ -128,12 +178,13 @@ html, body, #root
             &:hover
                 color: $color-primary         
     .hide
+        display: none
         animation-name: hide
-        animation-duration: 1s
+        animation-duration: 500ms
         transform: translateY(-200px)
     .show
         animation-name: show
-        animation-duration: 1s
+        animation-duration: 500ms
         transform: translateY(53px)
     
     @keyframes show
@@ -146,6 +197,7 @@ html, body, #root
 
     @keyframes hide
         0%
+            display: flex
             opacity: 1
             transform: translateY(53px)
         100%
@@ -153,22 +205,19 @@ html, body, #root
             transform: translateY(-200px)
 
     @media (min-width: 425px)
-        display: flex
-        justify-content: space-between
-        background-color: $color-black
-        padding: 1rem
-        font-family: $font-title
         i
             display: none !important
         .list
-            display: flex
+            display: block
             flex-direction: row
             width: 85%
             position: relative
             @media (min-width: 768px)
                 width: 28rem
         .hide, .show
+            display: flex
             transform: translateY(0px)
+            animation-duration: 0s
 
 // FOOTER
 .footer
@@ -231,3 +280,5 @@ html, body, #root
             font-size: $fontMmd
         img
             width: 33rem
+
+// PROJECT CONTAINER

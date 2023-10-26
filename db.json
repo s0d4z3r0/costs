@@ -21,6 +21,72 @@
       "cost": 0,
       "services": [],
       "id": 2
+    },
+    {
+      "name": "Projeto Inicial",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "budget": "2000",
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "name": "Teste",
+      "budget": "29000",
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "Teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "name": "Teste",
+      "budget": "5999",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
+    },
+    {
+      "name": "Projeto Inicial",
+      "budget": "623",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "Projeto Teste",
+      "budget": "3541",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
     }
   ],
   "categories": [
