@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({
-  name,
-  budget,
-  category,
-  cost,
-  services,
-  handleRemove,
-}) => {
+const ProjectCard = ({ id, name, budget, category, handleRemove }) => {
+  const remove = (e) => {
+    e.preventDefault();
+    handleRemove(id);
+  };
+
   return (
     <div className="card">
       <h4>{name}</h4>
@@ -17,14 +15,14 @@ const ProjectCard = ({
         {category}
       </p>
       <div className="card_actions">
-          <Link to={'/'}>
-              <button className="btn edit">
-                <i className="bi bi-pencil"></i>
-              </button>
-          </Link>
-          <button className="btn delete">
-            <i className="bi bi-trash"></i>
+        <Link to={"/"}>
+          <button className="btn edit">
+            <i className="bi bi-pencil"></i>
           </button>
+        </Link>
+        <button className="btn delete" onClick={remove}>
+          <i className="bi bi-trash"></i>
+        </button>
       </div>
     </div>
   );
