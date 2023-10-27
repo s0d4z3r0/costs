@@ -15,7 +15,7 @@ const ProjectCard = ({ id, name, budget, category, handleRemove }) => {
         {category}
       </p>
       <div className="card_actions">
-        <Link to={"/"}>
+        <Link to={`/project/${id}`}>
           <button className="btn edit">
             <i className="bi bi-pencil"></i>
           </button>

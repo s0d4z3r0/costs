@@ -16,6 +16,7 @@ import {
   createHashRouter, RouterProvider
 } from "react-router-dom";
 import Projects from "./components/pages/Projects.jsx";
+import Project from "./components/pages/Project.jsx";
 
 const router = createHashRouter([
   {
@@ -42,6 +43,10 @@ const router = createHashRouter([
       {
         path: '/newproject',
         element: <NewProject/>
+      },
+      {
+        path: '/project/:id',
+        element: <Project/>
       },
     ]
   },
