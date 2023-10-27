@@ -72,6 +72,10 @@ html, body, #root
     background-color: rgba(128, 21, 21, .8)
     &:hover
         background: rgba(128, 21, 21, 1)     
+.check
+    background-color: rgba(21, 128, 26, 0.8)
+    &:hover
+        background: rgba(21, 128, 26, 1)     
 
 // LOADER
 .custom-loader
@@ -283,3 +287,25 @@ html, body, #root
             width: 33rem
 
 // PROJECT CONTAINER
+.project_check
+    opacity: .3
+    animation-name: checked
+    animation-duration: 500ms
+    @keyframes checked
+        0%
+            opacity: 1
+        100%
+            opacity: .3
+    .project_card_actions
+        button.delete
+            pointer-events: none
+            
+.project_out
+    opacity: 1
+    animation-name: out
+    animation-duration: 500ms
+    @keyframes out
+        0%
+            opacity: .3
+        100%
+            opacity: 1
