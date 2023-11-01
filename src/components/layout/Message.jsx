@@ -34,8 +34,10 @@ const Message = ({
   return (
     <>
       {showMessage && (
-        <div className={`${type} message`}>
-          <p>{msg}</p>
+        <div className="message_bg">
+          <div className={`${type} message`}>
+            <p>{msg}</p>
+          </div>
         </div>
       )}
     </>

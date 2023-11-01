@@ -13,7 +13,7 @@ const ServiceCard = ({ id, name, cost, description, handleRemove }) => {
   };
 
   return (
-    <div className={`project_card ${serviceCheck ? "project_check" : "project_out"}`}>
+    <div className={`service_card ${serviceCheck ? "service_check" : "service_out"}`}>
       <h4>{name}</h4>
       <p>
         <span>Custo:</span> R${cost}
@@ -21,7 +21,7 @@ const ServiceCard = ({ id, name, cost, description, handleRemove }) => {
       <p>
         <span>Descrição:</span> {description}
       </p>
-      <div className="project_card_actions">
+      <div className="service_card_actions">
         <button className="btn check" onClick={checkService}>
           <i className="bi bi-check-lg"></i>
         </button>

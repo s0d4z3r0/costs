@@ -66,7 +66,9 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
         handleSelect={handleSelect}
       />
 
-      <Submit text={btnText} />
+      <div className="form_submit">
+        <Submit text={btnText} />
+      </div>
     </form>
   );
 };

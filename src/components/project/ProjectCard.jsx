@@ -7,14 +7,16 @@ const ProjectCard = ({ id, name, budget, category, handleRemove }) => {
   };
 
   return (
-    <div className="card">
+    <div className="project_card">
       <h4>{name}</h4>
-      <span>Orçamento: R${budget}</span>
+      <p>
+        Orçamento: <span>R${budget}</span>
+      </p>
       <p>
         <span className={`dot dot_${category}`}></span>
         {category}
       </p>
-      <div className="card_actions">
+      <div className="project_card_actions">
         <Link to={`/project/${id}`}>
           <button className="btn edit">
             <i className="bi bi-pencil"></i>

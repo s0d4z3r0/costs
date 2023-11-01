@@ -22,18 +22,23 @@ const Projects = () => {
 
   // Consumindo API
   useEffect(() => {
-    fetch("http://localhost:5000/projects", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-        setLoader(false);
+    // Simulando um loader com tempo de resposta utilizando setTimeOut
+    const time = setTimeout(() => {
+      fetch("http://localhost:5000/projects", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((res) => res.json())
+        .then((data) => {
+          setProjects(data);
+          setLoader(false);
+        })
+        .catch((err) => console.log(err));
+    }, 300);
+
+    return () => clearTimeout(time);
   }, []);
 
   // Removendo ID
@@ -54,8 +59,8 @@ const Projects = () => {
   };
 
   return (
-    <div className="project_container">
-      <div className="project_title_container">
+    <div className="projects_container">
+      <div className="projects_title_container">
         <h1>Meus Projetos</h1>
         <LinkButton text="Criar Projeto" to="/newproject" />
       </div>
@@ -70,7 +75,7 @@ const Projects = () => {
       {projectMessage && (
         <Message
           msg={projectMessage}
-          type="error"
+          type="success"
           time={3000}
           setProjectMessage={setProjectMessage}
         />
@@ -91,7 +96,9 @@ const Projects = () => {
             .reverse()}
         {loader && <Loader />}
         {!loader && projects.length === 0 && (
-          <p>Não há projetos cadastrados!</p>
+          <div className="projects_empty_state">
+            <p>Não há projetos cadastrados!</p>
+          </div>
         )}
       </Container>
     </div>
