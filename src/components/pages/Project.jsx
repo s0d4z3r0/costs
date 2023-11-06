@@ -163,7 +163,7 @@ const Project = () => {
             )}
             <div className="returnToProjects">
               <Link to={"/projects"}>
-                <button className="btn bi bi-arrow-left">Projetos</button>
+                <button className="btn bi bi-arrow-left">Voltar para Projetos</button>
               </Link>
             </div>
             <div className="project_details_container">
@@ -205,9 +205,9 @@ const Project = () => {
                   <h2>Adicione um serviço</h2>
                   <button className="btn" onClick={toggleServiceForm}>
                     {!showServiceForm ? (
-                      <i className="bi bi-chevron-double-down"></i>
+                      <i className="bi bi-plus-circle"></i>
                     ) : (
-                      <i className="bi bi-chevron-double-up"></i>
+                      <i className="bi bi-dash-circle"></i>
                     )}
                   </button>
                 </div>
@@ -245,7 +245,9 @@ const Project = () => {
                         ))
                         .reverse()}
                     {services.length === 0 && (
-                      <p>Ainda não há serviço adicionado.</p>
+                      <div className="project_services_none">
+                        <p>Ainda não há serviço adicionado.</p>
+                      </div>
                     )}
                   </Container>
                 </div>

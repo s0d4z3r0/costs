@@ -18,7 +18,7 @@ const ServiceForm = ({handleSubmit, btnText, projectData}) => {
     
   return (
     <div>
-        <form onSubmit={submit} className="form">
+        <form onSubmit={submit} className="form_service">
             <Input type="text" text="Nome do Serviço" name="name"
             placeholder="Insira o nome do serviço"
             handleOnChange={handleChange}/>

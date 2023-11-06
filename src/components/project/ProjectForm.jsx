@@ -41,7 +41,7 @@ const ProjectForm = ({ handleSubmit, btnText, projectData }) => {
   };
 
   return (
-    <form className="form" onSubmit={submit}>
+    <form className="form_project" onSubmit={submit}>
       <Input
         type="text"
         text="Nome do Projeto"

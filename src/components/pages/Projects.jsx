@@ -5,6 +5,7 @@ import Container from "../layout/Container";
 import LinkButton from "../layout/LinkButton";
 import ProjectCard from "../project/ProjectCard";
 import Loader from "../layout/Loader";
+import EmptyState from "../../img/pasta-vazia.png"
 
 const Projects = () => {
   const location = useLocation();
@@ -61,7 +62,7 @@ const Projects = () => {
   return (
     <div className="projects_container">
       <div className="projects_title_container">
-        <h1>Meus Projetos</h1>
+        <h1>Projetos</h1>
         <LinkButton text="Criar Projeto" to="/newproject" />
       </div>
       {message && (
@@ -97,7 +98,8 @@ const Projects = () => {
         {loader && <Loader />}
         {!loader && projects.length === 0 && (
           <div className="projects_empty_state">
-            <p>Não há projetos cadastrados!</p>
+            <p>Ainda não há projetos cadastrados!</p>
+            <img src={EmptyState} alt="Imagem vazia" />
           </div>
         )}
       </Container>
