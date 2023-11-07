@@ -76,7 +76,7 @@ const Projects = () => {
       {projectMessage && (
         <Message
           msg={projectMessage}
-          type="success"
+          type="error"
           time={3000}
           setProjectMessage={setProjectMessage}
         />

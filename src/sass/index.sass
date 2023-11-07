@@ -30,10 +30,6 @@ html, body, #root
     font-weight: bold
     display: flex
     align-items: center
-    @media (min-width: 425px)
-        font-size: $fontSm
-    @media (min-width: 768px)
-        font-size: $fontMmd
 @mixin inputSelect
     font-family: $font-title
     font-size: $fontSsm
@@ -44,15 +40,9 @@ html, body, #root
     background-color: $color-black
     color: $color-primary
     outline: none
-    @media (min-width: 425px)
-        font-size: $fontSm
-    @media (min-width: 768px)
-        font-size: $fontMmd
-        height: 2.5rem
     &::placeholder
         color: $color-primary
         font-family: $font-title
-
 
 // FORM
 // INPUT e SELECT
@@ -74,13 +64,8 @@ html, body, #root
     flex-wrap: wrap
     width: 95%
     overflow-y: auto
-
-    @media (min-width: 1200px)
-        width: 1200px
 .min-height
     min-height: 90.6vh
-    @media (min-width: 768px)
-        min-height: 90.2vh
 .start
     justify-content: center
 .column
@@ -114,10 +99,6 @@ html, body, #root
             &:hover
                 color: $color-secondary
 
-    @media (min-width: 425px)
-        p, p a
-            font-size: $fontSm
-
 // LINKBUTTON
 .btn
     font-size: $fontSsm
@@ -132,10 +113,6 @@ html, body, #root
     border-radius: 5px
     transition: 200ms ease-in-out
     cursor: pointer
-    @media (min-width: 425px)
-        font-size: $fontSm
-    @media (min-width: 768px)
-        font-size: $fontMmd
     &:hover
         background: rgba($color-black, 1)
 .edit
@@ -215,11 +192,6 @@ html, body, #root
     font-family: $font-title
     font-weight: bold
     animation: showMessage 1s ease-in-out
-    @media (min-width: 425px)
-        font-size: $fontSm
-    @media (min-width: 768px)
-        width: 36rem
-        font-size: $fontMmd
 .success
     border-color: #4fce69
     background-color: #adeeba
@@ -298,21 +270,6 @@ html, body, #root
             opacity: 0
             transform: translateY(-200px)
 
-    @media (min-width: 425px)
-        i
-            display: none !important
-        .list
-            display: block
-            flex-direction: row
-            width: 85%
-            position: relative
-            @media (min-width: 768px)
-                width: 28rem
-        .hide, .show
-            display: flex
-            transform: translateY(0px)
-            animation-duration: 0s
-
 // PAGES
 // HOME
 .home_container
@@ -333,20 +290,6 @@ html, body, #root
     img
         width: 100%
         margin: 2rem 0 0
-    @media (min-width: 425px)
-        h1
-            font-size: $fontXg
-        p
-            font-size: $fontSm
-        img
-            width: 82%
-    @media (min-width: 768px)
-        h1
-            font-size: $fontXXg
-        p
-            font-size: $fontMmd
-        img
-            width: 33rem
 
 // NEW PROJECT
 .new_project
@@ -364,16 +307,6 @@ html, body, #root
         text-align: center
         font-family: $font-text
         font-size: $fontSsm
-    @media (min-width: 425px)
-        h1
-            font-size: $fontXg
-        p
-            font-size: $fontSm
-    @media (min-width: 768px)
-        h1
-            font-size: $fontXXg
-        p
-            font-size: $fontMmd
 
 // PROJECTS
 .projects_container
@@ -390,12 +323,6 @@ html, body, #root
         text-align: center
         font-family: $font-title
         font-size: $fontMmd
-    @media (min-width: 425px)
-        h1
-            font-size: $fontXg
-    @media (min-width: 768px)
-        h1
-            font-size: $fontXXg
 .projects_empty_state
     width: 100%
     margin: 3rem 0
@@ -408,16 +335,6 @@ html, body, #root
     img
         width: 4rem
         opacity: .3
-    @media (min-width: 425px)
-        p
-            font-size: $fontSm
-        img
-            width: 5.5rem
-    @media (min-width: 768px)
-        p
-            font-size: $fontMmd
-        img
-            width: 7rem
 
 // PROJECT PAGE
 .returnToProjects
@@ -439,21 +356,6 @@ html, body, #root
             &:hover
                 background-color: rgba($color-black, .8)
                 color: $color-primary
-    @media (min-width: 425px)
-        top: 5.5rem
-        left: 1rem
-        a
-            button
-                font-size: $fontSm
-                width: 12rem
-    @media (min-width: 768px)
-        top: 6rem
-        left: 2rem
-        a
-            button
-                font-size: $fontMmd
-                width: 16rem
-                height: 2.2rem
 .project_details
     padding: 3rem 0
     width: 100%
@@ -469,12 +371,6 @@ html, body, #root
         font-size: $fontMmd
         span
             color: $color-primary
-    @media (min-width: 425px)
-        h1
-            font-size: $fontXg
-    @media (min-width: 768px)
-        h1
-            font-size: $fontXXg
     .edit_back
         margin: 0 auto
         width: 50%
@@ -509,16 +405,6 @@ html, body, #root
         box-shadow: -2px 4px 10px rgba($color-black, .2)
         form
             padding: 1rem
-    @media (min-width: 425px)
-        margin: 1rem auto
-        width: 22rem
-        p
-            font-size: $fontSm
-    @media (min-width: 768px)
-        margin: 2rem auto
-        width: 28rem
-        p
-            font-size: $fontMmd
 .service_form_container
     padding: 1rem 0
     width: 99%
@@ -535,12 +421,6 @@ html, body, #root
         font-family: $font-title
         font-size: $fontMmd
         text-align: center
-    @media (min-width: 425px)
-        h2
-            font-size: $fontMd
-    @media (min-width: 768px)
-        h2
-            font-size: $fontXg
     button
         display: flex
         justify-content: center
@@ -572,7 +452,7 @@ html, body, #root
             opacity: 1
             transform: scale(1)
 .project_services
-    width: auto
+    width: 90%
     margin: 3rem auto
     padding: 1rem 0.5rem 2rem
     border-radius: 10px
@@ -582,29 +462,10 @@ html, body, #root
         font-family: $font-title
         font-size: $fontMmd
         margin-bottom: 1rem
-    @media (min-width: 425px)
-        h2
-            font-size: $fontXg
-    @media (min-width: 768px)
-        width: 95%
-        h2
-            font-size: $fontXXg
-    @media (min-width: 1200px)
-        width: 97%
-
-        // width: 73rem
-.project_services_none
-    width: 100%
     p
-        text-align: center
+        margin: 0 auto
         font-family: $font-text
         font-size: $fontSsm
-    @media (min-width: 425px)
-        p
-            font-size: $fontSm
-    @media (min-width: 768px)
-        p
-            font-size: $fontMmd
 
 // COMPANY
 .company
@@ -618,16 +479,7 @@ html, body, #root
     p
         font-family: $font-text
         font-size: $fontSsm
-    @media (min-width: 425px)
-        h1
-            font-size: $fontXg
-        p
-            font-size: $fontSm
-    @media (min-width: 768px)
-        h1
-            font-size: $fontXXg
-        p
-            font-size: $fontMmd
+
 // CONTACT
 .contact
     margin: 0 auto
@@ -663,16 +515,6 @@ html, body, #root
                 font-size: $fontSsm
                 font-family: $font-title
                 margin-left: 0.5rem
-    @media (min-width: 425px)
-        h1, .contact_links a i
-            font-size: $fontXg
-        p, .contact_links a span
-            font-size: $fontSm
-    @media (min-width: 768px)
-        h1, .contact_links a i
-            font-size: $fontXXg
-        p, .contact_links a span
-            font-size: $fontMmd
 
 // PROJECT
 // DOT
@@ -717,13 +559,6 @@ html, body, #root
         font-size: $fontSsm
         &:nth-of-type(2), span
             font-weight: bold
-    @media (min-width: 375px)
-        width: 17rem
-    @media (min-width: 425px)
-        h4
-            font-size: $fontMmd
-        p
-            font-size: $fontSm
 .project_card_actions
     margin-top: 1rem
     display: flex
@@ -746,7 +581,6 @@ html, body, #root
     width: 100%
     margin: .5rem 1rem
     padding: 1rem
-    
     h4
         text-align: center
         font-family: $font-title
@@ -766,19 +600,6 @@ html, body, #root
         margin: 0.5rem 0
         span
             font-weight: bold
-    @media (min-width: 375px)
-        width: 17rem
-    @media (min-width: 425px)
-        h4
-            font-size: $fontMmd
-        p
-            font-size: $fontSm
-    @media (min-width: 768px)
-        width: 22rem
-        h4
-            font-size: $fontMd
-        p
-            font-size: $fontMmd
 .service_card_actions
     margin-top: 1rem
     display: flex
@@ -818,10 +639,6 @@ html, body, #root
     flex-direction: column
     gap: 1rem
     width: 100%
-    @media (min-width: 425px)
-        width: 22rem
-    @media (min-width: 768px)
-        width: 28rem
     .form_submit
         text-align: center
 
@@ -830,9 +647,145 @@ html, body, #root
     flex-direction: column
     gap: 1rem
     width: 13rem
-    @media (min-width: 425px)
-        width: 20rem
-    @media (min-width: 768px)
-        width: 26rem
     .form_submit
         text-align: center
+
+@media (min-width: 375px)
+    .project_card
+        width: 17rem
+    .service_card
+        width: 17rem
+
+@media (min-width: 425px)
+    .input_control label span,
+    .select_control label span,
+    .input_control label input,
+    .select_control label select,
+    .btn,
+    .message,
+    .project_info p
+        font-size: $fontSm
+    .new_project,
+    .footer,
+    .home_container,
+    .projects_title_container,
+    .projects_empty_state,
+    .project_details_container,
+    .company,
+    .contact,
+    .project_card,
+    .project_services
+        h1
+            font-size: $fontXg
+        h4
+            font-size: $fontMmd
+        p
+            font-size: $fontSm
+    .footer p a
+        font-size: $fontSm
+    .navbar
+        i
+            display: none !important
+        .list
+            display: block
+            flex-direction: row
+            width: 85%
+            position: relative
+        .hide, .show
+            display: flex
+            transform: translateY(0px)
+            animation-duration: 0s
+    .home_container img
+        width: 82%
+    .projects_empty_state img
+        width: 5.5rem
+    .returnToProjects
+        top: 5.5rem
+        left: 1rem
+        a
+            button
+                font-size: $fontSm
+                width: 12rem
+    .project_info
+        margin: 1rem auto
+        width: 22rem
+    .service_addTitle_btn h2
+        font-size: $fontMmd
+    .contact .contact_links a i
+        font-size: $fontXg
+    .contact .contact_links a span
+        font-size: $fontSm
+    .form_project
+        width: 22rem
+    .form_service
+        width: 20rem
+
+@media (min-width: 768px)
+    .input_control label span,
+    .select_control label span,
+    .input_control label input,
+    .select_control label select,
+    .btn,
+    .message,
+    .project_info p
+        font-size: $fontMmd
+    .input_control label input,
+    .select_control label select
+        height: 2.5rem
+    .message
+        width: 36rem
+    .new_project,
+    .home_container,
+    .projects_title_container,
+    .projects_empty_state,
+    .project_details_container,
+    .company,
+    .contact,
+    .project_services
+        h1
+            font-size: $fontXXg
+        h4
+            font-size: $fontMd
+        p
+            font-size: $fontMmd
+    .navbar .list
+        width: 28rem
+    .home_container img
+        width: 41rem
+    .projects_empty_state img
+        width: 7rem
+    .returnToProjects
+        top: 6rem
+        left: 2rem
+        a
+            button
+                font-size: $fontMmd
+                width: 16rem
+                height: 2.2rem
+    .project_info
+        margin: 2rem auto
+        width: 28rem
+    .service_addTitle_btn h2,
+    .project_services h2
+        font-size: $fontXg
+    .project_services
+        width: 95%
+    .contact .contact_links a i
+        font-size: $fontXXg
+    .contact .contact_links a span
+        font-size: $fontMmd
+    .service_card
+        width: 22rem
+    .form_project
+        width: 28rem
+    .form_service
+        width: 26rem
+
+@media (min-width: 1200px)
+    .container
+        width: 1194px
+    .start
+        justify-content: flex-start
+        width: 100% !important
+    .project_services
+        width: 97%

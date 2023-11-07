@@ -142,7 +142,7 @@ const Project = () => {
         setProject(projectUpdated);
         setServices(servicesUpdated);
         setTextMessage("Serviço removido com sucesso!");
-        setTypeMessage("success");
+        setTypeMessage("error");
         setShowMessage(true);
       })
       .catch((err) => console.log(err));
@@ -157,7 +157,7 @@ const Project = () => {
               <Message
                 type={typeMessage}
                 msg={textMessage}
-                time={7000}
+                time={3000}
                 setTextMessage={setTextMessage}
               />
             )}
@@ -234,20 +234,18 @@ const Project = () => {
                     {services.length > 0 &&
                       services
                         .map((service) => (
-                          <ServiceCard
-                            key={service.id}
-                            id={service.id}
-                            name={service.name}
-                            cost={service.cost}
-                            description={service.description}
-                            handleRemove={removeService}
-                          />
+                            <ServiceCard
+                              key={service.id}
+                              id={service.id}
+                              name={service.name}
+                              cost={service.cost}
+                              description={service.description}
+                              handleRemove={removeService}
+                            />
                         ))
                         .reverse()}
                     {services.length === 0 && (
-                      <div className="project_services_none">
                         <p>Ainda não há serviço adicionado.</p>
-                      </div>
                     )}
                   </Container>
                 </div>
